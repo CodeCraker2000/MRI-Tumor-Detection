@@ -1,0 +1,48 @@
+<!--{% extends "base.html" %} {% block content %}-->
+<html>
+  <head>
+    <title>MRI</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h2>Brain MRI Image Classifier</h2>
+    <img class="wave" src="img/wave.png" />
+    <div class="container">
+      <div class="img">
+        <img src="./assets/pro2.svg" />
+      </div>
+      <div class="login-content">
+        <form action="index.html">
+          <img src="./assets/pro1.svg" />
+    <div>
+      <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label"> Choose... </label>
+        <input
+          type="file"
+          name="file"
+          id="imageUpload"
+          accept=".png, .jpg, .jpeg"
+        />
+      </form>
+
+      <div class="image-section" style="display: none">
+        <div class="img-preview">
+          <div id="imagePreview"></div>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary btn-lg" id="btn-predict">
+            Predict!
+          </button>
+        </div>
+      </div>
+
+      <div class="loader" style="display: none"></div>
+
+      <h3 id="result">
+        <span> </span>
+      </h3>
+    </div>
+  </body>
+</html>
+
+<!--{% endblock %}-->
